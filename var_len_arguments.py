@@ -1,6 +1,14 @@
 # *args and **kwargs allow you to pass a variable number of arguments to a function.
 # They are very useful when you don't know in advance how many arguments a function might receive.
 
+#Type of Arguments:
+#*args handles positional arguments (unnamed arguments).
+#**kwargs handles keyword arguments (named arguments as key-value pairs).
+
+#Data Type Inside the Function:
+#*args is treated as a tuple.
+#**kwargs is treated as a dictionary.
+
 '''
 1. *args (Non-Keyword Arguments)
 Used to pass a variable number of non-keyword arguments to a function.
@@ -16,7 +24,7 @@ def sum_numbers(*args):
     total = sum(args)
     print(f"The sum is: {total}")
 
-sum_numbers(1, 2, 3, 4, 5)
+sum_numbers(1, 2, 3, 4, 5, 10)
 
 # Joining Strings
 def join_strings(*args):
@@ -28,7 +36,7 @@ join_strings("Hello", "World", "Python", "is", "awesome")
 #Accessing Arguments by Index
 def print_args(*args):
     for i, value in enumerate(args):
-        print(f"Argument {i}: {value}")
+        print(f" {i}: {value}")
 
 print_args(10, 20, 30, 40, 50)
 
